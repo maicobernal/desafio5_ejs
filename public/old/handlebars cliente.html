@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+
+  <span></span> <!-- para inyectar el resultado -->
+
+
+
+  <!-- incluir handlebars desde el CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.7/handlebars.min.js"></script>
+
+  <script>
+    const objeto = {
+      nombre: 'John',
+      apellido: 'Doe',
+      edad: 33,
+      email: 'johndoe@anonymous.org',
+      telefono: '541166699966'
+    }
+    
+    const codigo =
+      '<h1>Datos Personales</h1> <ul> <li>{{nombre}}</li> <li>{{apellido}}</li> <li>{{edad}}</li> <li>(email)</li> <li>(teléfono)</li>'
+    const template = Handlebars.compile(codigo);
+    const html = template({
+      nombre: objeto.nombre,
+      apellido: objeto.apellido,
+    }); // genera el html
+    document.querySelector('span').innerHTML = html; // inyecta el resultado en la vista
+  </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<h2 class="center">Modificar producto</h2>
+
+            <form class="row g-3 justify-content-evenly" id="productonuevo" name="productonuevo" autocomplete="off" action="/api/productos/form" method="POST">
+              <div class="col-md-12">
+                <label class="form-label">ID del producto a modificar</label>
+                <input type="text" class="form-control" id="idlook" name="id" required>
+              </div>
+              <div class="btn btn-secondary" onclick="procesar()">Buscar producto</div> 
+          </form>
+        
+            <form class="row g-3 justify-content-evenly" id="productonuevo" name="productonuevo" autocomplete="off" action="/api/productos/form" method="PUT">
+              <div class="col-md-12">
+                <label class="form-label" for="idproducto">ID del producto</label>
+                <input type="text" class="form-control" id="idproducto" name="idproducto" disabled>
+              </div>
+                <div class="col-md-12">
+                  <label class="form-label" for="title">Nombre del producto</label>
+                  <input type="text" class="form-control" id="title" name="title" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="price">Precio</label>
+                  <input type="text" class="form-control" id="price" name="price" required>
+                </div>
+                <div class="col-md-6">
+                  <label class="form-label" for="stock">Stock inicial</label>
+                  <input type="text" class="form-control" id="stock" name="stock" required>
+                </div>
+                <div class="col-md-12">
+                  <label class="form-label" for="thumbnail">URL de la foto</label>
+                  <input type="text" class="form-control" id="thumbnail" name="thumbnail" required>
+                </div>
+                <div class="btn btn-primary" onclick="mandar()">Modificar producto</div> 
+            </form>

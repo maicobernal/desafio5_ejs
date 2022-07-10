@@ -1,0 +1,10 @@
+<h2 class="center">Borrar producto</h2>
+
+<form class="row g-3 justify-content-evenly" id="productonuevo" name="productonuevo" autocomplete="off"
+    action="/api/productos/form" method="POST">
+    <div class="col-md-12">
+        <label class="form-label">ID del producto a borrar</label>
+        <input type="text" class="form-control" id="idlook" name="id" required>
+    </div>
+    <div class="btn btn-primary" onclick="borrar()">Eliminar producto</div>
+</form>
